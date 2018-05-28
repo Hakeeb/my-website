@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Circular-Book.woff") format('woff'),
+         url("../fonts/Circular-Book.eot") format('eot'),
+         url("../fonts/Circular-Book.ttf") format('ttf');
+}
+
+@font-face {
+    font-family: 'Circular';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Circular-Medium.woff") format('woff'),
+         url("../fonts/Circular-Medium.eot") format('eot'),
+         url("../fonts/Circular-Medium.ttf") format('ttf');
+}
+
+@font-face {
+	font-family: system;
+	font-style: normal;
+	font-weight: 400;
+	src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+	font-family: system;
+	font-style: normal;
+	font-weight: 500;
+	src: local(".SFNSText-Medium"), local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold"), local("Ubuntu Medium"), local("Roboto-Medium"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
