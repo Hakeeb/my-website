@@ -486,8 +486,11 @@ body {
   font-weight: 400; }
 
 a {
-  color: inherit;
-  text-decoration: none; }
+  color: #DCDCE1;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out; }
+  a:hover {
+    color: #DCDCE1; }
 
 .navmod {
   background: #121738;
@@ -561,12 +564,21 @@ a {
     height: 2.0rem;
     width: 2.0rem;
     margin-right: 0.4rem; }
+  .svg-icon--portfolio {
+    fill: #FFFFFF;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1.2rem; }
+  .svg-icon--menu {
+    fill: #DCDCE1;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1.2rem; }
 
 .heading-1 {
   color: #FFFFFF;
   font-size: 6.8rem;
   font-weight: 500;
-  line-height: 9.6rem;
   margin-top: 0;
   margin-bottom: 1.2rem; }
 
@@ -592,6 +604,12 @@ a {
   line-height: 3.6rem;
   margin-bottom: 4.2rem; }
 
+.text-white {
+  color: #FFFFFF; }
+
+.text-pink {
+  color: #D17C78; }
+
 .hero {
   background: #121738;
   min-height: 100vh;
@@ -603,11 +621,51 @@ a {
   .others__block:not(:last-child) {
     margin-bottom: 20rem; }
 
-.portfolio-img {
+.portfolio {
+  background: rgba(27, 32, 64, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 2px;
-  width: 100%;
-  height: 260px;
-  object-fit: cover; }
+  height: 26rem;
+  position: relative;
+  width: 100%; }
+  .portfolio--1 {
+    background-image: url("../images/shuttlers.png"); }
+  .portfolio--2 {
+    background-image: url("../images/onboarding.png"); }
+  .portfolio--3 {
+    background-image: url("../images/shelter-place.png"); }
+  .portfolio--4 {
+    background-image: url("../images/shuttlers.png"); }
+  .portfolio__cover {
+    background: rgba(27, 32, 64, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background 0.2s ease-in-out 0.4s;
+    width: 100%; }
+  .portfolio__info {
+    left: 7%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out 0.4s;
+    top: 80%;
+    width: 100%; }
+  .portfolio__title {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 500; }
+  .portfolio__more-works {
+    color: #DCDCE1;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 8rem; }
+    .portfolio__more-works * {
+      vertical-align: middle; }
+    .portfolio__more-works :hover {
+      color: #FFFFFF; }
 
 .contact-email {
   color: #D17C78;
@@ -615,3 +673,79 @@ a {
   line-height: 4.2rem;
   margin-bottom: 4rem;
   margin-top: 4rem; }
+
+.portfolio-animate {
+  -webkit-animation: portfolio-frame 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: portfolio-frame 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@-webkit-keyframes portfolio-frame {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%; }
+  100% {
+    -webkit-transform: scaleY(0.25);
+    transform: scaleY(0.25);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%; } }
+
+@keyframes portfolio-frame {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%; }
+  100% {
+    -webkit-transform: scaleY(0.25);
+    transform: scaleY(0.25);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%; } }
+
+.fade-in-bottom {
+  -webkit-animation: fade-in-bottom 1.15s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-bottom 1.15s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+.fade-in-fwd {
+  -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.85s both;
+  animation: fade-in-fwd 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.85s both; }
+
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1; } }
+
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1; } }

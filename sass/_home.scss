@@ -24,7 +24,8 @@
             vertical-align: middle;
         }
         @include screen(med-small) {
-            margin: 2rem;;
+            margin: 2rem;
+            ;
         }
     }
     &__item {
@@ -83,13 +84,24 @@
         width: 2.0rem;
         margin-right: 0.4rem;
     }
+    &--portfolio {
+        fill: #FFFFFF;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1.2rem;
+    }
+    &--menu {
+        fill: #DCDCE1;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1.2rem;
+    }
 }
 
 .heading-1 {
     color: #FFFFFF;
     font-size: 6.8rem;
     font-weight: 500;
-    line-height: 9.6rem;
     margin-top: 0;
     margin-bottom: 1.2rem;
 }
@@ -112,13 +124,20 @@
 .body-1 {
     font-size: 2.4rem;
     line-height: 4.0rem;
-
 }
 
 .body-2 {
     font-size: 2.0rem;
     line-height: 3.6rem;
     margin-bottom: 4.2rem;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-pink {
+    color: #D17C78;
 }
 
 .hero {
@@ -135,11 +154,61 @@
     }
 }
 
-.portfolio-img {
+.portfolio {
+    background: rgba(#1B2040, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 2px;
+    height: 26rem;
+    position: relative;
     width: 100%;
-    height: 260px;
-    object-fit: cover;
+    &--1 {
+        background-image: url('../images/shuttlers.png');
+    }
+    &--2 {
+        background-image: url('../images/onboarding.png');
+    }
+    &--3 {
+        background-image: url('../images/shelter-place.png');
+    }
+    &--4 {
+        background-image: url('../images/shuttlers.png');
+    }
+    &__cover {
+        background: rgba(#1B2040, 0.5);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: background 0.2s ease-in-out 0.4s;
+        width: 100%;
+    }
+    &__info {
+        left: 7%;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 0.2s ease-in-out 0.4s;
+        top: 80%;
+        width: 100%;
+    }
+    &__title {
+        color: #FFFFFF;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &__more-works {
+        color: #DCDCE1;
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-top: 8rem;
+        * {
+            vertical-align: middle;
+        }
+        :hover {
+            color: #FFFFFF;
+        }
+    }
 }
 
 .contact-email {
@@ -148,4 +217,101 @@
     line-height: 4.2rem;
     margin-bottom: 4rem;
     margin-top: 4rem;
+}
+
+.portfolio-animate {
+    -webkit-animation: portfolio-frame 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: portfolio-frame 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes portfolio-frame {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+    }
+    100% {
+        -webkit-transform: scaleY(0.25);
+        transform: scaleY(0.25);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+    }
+}
+
+@keyframes portfolio-frame {
+    0% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+    }
+    100% {
+        -webkit-transform: scaleY(0.25);
+        transform: scaleY(0.25);
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+    }
+}
+
+.fade-in-bottom {
+    -webkit-animation: fade-in-bottom 1.15s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-bottom 1.15s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in-fwd {
+    -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) 0.85s both;
+    animation: fade-in-fwd 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) 0.85s both;
+}
+
+@-webkit-keyframes fade-in-fwd {
+    0% {
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-fwd {
+    0% {
+        -webkit-transform: translateZ(-80px);
+        transform: translateZ(-80px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
 }

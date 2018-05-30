@@ -11,6 +11,10 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #DCDCE1;
   text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    color: #DCDCE1;
+  }
 }
