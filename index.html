@@ -329,65 +329,24 @@
     window.sr = ScrollReveal();
     sr.reveal('.others__block', {
         duration: 900,
-        viewFactor: 0.3,
+        viewFactor: 0.2,
     });
 
     let ptList = document.querySelectorAll('.portfolio');
 
-    ptList[0].addEventListener('mouseover', function () {
-        let ptCover = ptList[0].children[0];
-        let ptInfo = ptList[0].children[1];
-        ptCover.classList.add("portfolio-animate");
-        ptInfo.style.opacity = '1';
-    });
-
-    ptList[0].addEventListener('mouseout', function () {
-        let ptCover = ptList[0].children[0];
-        let ptInfo = ptList[0].children[1];
-        ptCover.classList.remove("portfolio-animate");
-        ptInfo.style.opacity = '0';
-    });
-
-    ptList[1].addEventListener('mouseover', function () {
-        let ptCover = ptList[1].children[0];
-        let ptInfo = ptList[1].children[1];
-        ptCover.classList.add("portfolio-animate");
-        ptInfo.style.opacity = '1';
-    });
-
-    ptList[1].addEventListener('mouseout', function () {
-        let ptCover = ptList[1].children[0];
-        let ptInfo = ptList[1].children[1];
-        ptCover.classList.remove("portfolio-animate");
-        ptInfo.style.opacity = '0';
-    });
-
-    ptList[2].addEventListener('mouseover', function () {
-        let ptCover = ptList[2].children[0];
-        let ptInfo = ptList[2].children[1];
-        ptCover.classList.add("portfolio-animate");
-        ptInfo.style.opacity = '1';
-    });
-
-    ptList[2].addEventListener('mouseout', function () {
-        let ptCover = ptList[2].children[0];
-        let ptInfo = ptList[2].children[1];
-        ptCover.classList.remove("portfolio-animate");
-        ptInfo.style.opacity = '0';
-    });
-
-    ptList[3].addEventListener('mouseover', function () {
-        let ptCover = ptList[3].children[0];
-        let ptInfo = ptList[3].children[1];
-        ptCover.classList.add("portfolio-animate");
-        ptInfo.style.opacity = '1';
-    });
-
-    ptList[3].addEventListener('mouseout', function () {
-        let ptCover = ptList[3].children[0];
-        let ptInfo = ptList[3].children[1];
-        ptCover.classList.remove("portfolio-animate");
-        ptInfo.style.opacity = '0';
+    ptList.forEach(item => {
+        item.addEventListener('mouseover', function () {
+            let ptCover = item.children[0];
+            let ptInfo = item.children[1];
+            ptCover.classList.add("portfolio-animate");
+            ptInfo.style.opacity = '1';
+        });
+        item.addEventListener('mouseout', function () {
+            let ptCover = item.children[0];
+            let ptInfo = item.children[1];
+            ptCover.classList.remove("portfolio-animate");
+            ptInfo.style.opacity = '0';
+        });
     });
 
 </script>
